@@ -9,11 +9,13 @@ import currentUser from "../data/currentUser.json";
 import collectionHistory from "../data/collectionHistory.json";
 import fishermen from "../data/fishermen.json";
 import trends from "../data/trends.json";
+import { useTranslation } from "../contexts/useTranslation.jsx";
 
 const statusVariant = { Approved: "success", Pending: "pending" };
 
 export default function FishermanDashboard() {
   const [loading, setLoading] = useState(true);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 700);
@@ -43,7 +45,7 @@ export default function FishermanDashboard() {
           </div>
         </div>
         <div className="text-right">
-          <p className="text-xs text-abyss/50 uppercase font-semibold">Collection Center</p>
+          <p className="text-xs text-abyss/50 uppercase font-semibold">{t("dashboard.collectionCenterLabel")}</p>
           <p className="font-medium text-abyss">{currentUser.collectionCenter}</p>
         </div>
       </GlassCard>
@@ -55,24 +57,24 @@ export default function FishermanDashboard() {
         </div>
       ) : (
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <StatCard icon={Waves} label="Total Waste Collected" value={currentUser.totalKg} suffix="kg" accent="#1363DF" trend="+12.4% this month" />
-          <StatCard icon={Coins} label="Rewards Earned" value={currentUser.points.toLocaleString()} suffix="pts" accent="#0CCE6B" trend="+368 pts last trip" />
-          <StatCard icon={Ship} label="Total Trips" value={currentUser.trips} suffix="trips" accent="#47B5FF" />
-          <StatCard icon={Trophy} label="Current Rank" value={`#${currentUser.rank}`} suffix={`of ${currentUser.totalFishermen}`} accent="#FF7A5C" />
+          <StatCard icon={Waves} label={t("dashboard.totalWaste")} value={currentUser.totalKg} suffix="kg" accent="#1363DF" trend="+12.4% this month" />
+          <StatCard icon={Coins} label={t("dashboard.rewardsEarned")} value={currentUser.points.toLocaleString()} suffix="pts" accent="#0CCE6B" trend="+368 pts last trip" />
+          <StatCard icon={Ship} label={t("dashboard.totalTrips")} value={currentUser.trips} suffix="trips" accent="#47B5FF" />
+          <StatCard icon={Trophy} label={t("dashboard.currentRank")} value={`#${currentUser.rank}`} suffix={`of ${currentUser.totalFishermen}`} accent="#FF7A5C" />
         </div>
       )}
 
       <div className="grid lg:grid-cols-3 gap-6">
         {/* Chart */}
         <GlassCard className="p-6 lg:col-span-2">
-          <h3 className="font-display font-semibold text-abyss mb-1">Monthly Waste Collection</h3>
-          <p className="text-xs text-abyss/50 mb-2">Your personal collection volume, Jan – Jun 2026</p>
+          <h3 className="font-display font-semibold text-abyss mb-1">{t("dashboard.chartHeading")}</h3>
+          <p className="text-xs text-abyss/50 mb-2">{t("dashboard.chartCaption")}</p>
           <MonthlyTrendChart data={trends.personal} dataKey="kg" color="#1363DF" />
         </GlassCard>
 
         {/* Leaderboard */}
         <GlassCard className="p-6">
-          <h3 className="font-display font-semibold text-abyss mb-4">Top Contributors</h3>
+          <h3 className="font-display font-semibold text-abyss mb-4">{t("dashboard.leaderboardHeading")}</h3>
           <div className="space-y-3">
             {leaderboard.slice(0, 5).map((f) => (
               <div key={f.id} className="flex items-center gap-3">
@@ -105,7 +107,7 @@ export default function FishermanDashboard() {
       {/* Collection history */}
       <GlassCard className="p-6">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="font-display font-semibold text-abyss">Recent Collection History</h3>
+          <h3 className="font-display font-semibold text-abyss">{t("dashboard.recentHistoryHeading")}</h3>
           <Fish className="text-abyss/30" size={18} />
         </div>
         {loading ? (
@@ -117,11 +119,11 @@ export default function FishermanDashboard() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="text-left text-abyss/45 text-xs uppercase font-semibold border-b border-abyss/5">
-                  <th className="py-2.5 pr-4">Date</th>
-                  <th className="py-2.5 pr-4">Category</th>
-                  <th className="py-2.5 pr-4">Weight</th>
-                  <th className="py-2.5 pr-4">Points</th>
-                  <th className="py-2.5 pr-4">Status</th>
+                  <th className="py-2.5 pr-4">{t("dashboard.history.date")}</th>
+                  <th className="py-2.5 pr-4">{t("dashboard.history.category")}</th>
+                  <th className="py-2.5 pr-4">{t("dashboard.history.weight")}</th>
+                  <th className="py-2.5 pr-4">{t("dashboard.history.points")}</th>
+                  <th className="py-2.5 pr-4">{t("dashboard.history.status")}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-abyss/5">
@@ -132,7 +134,7 @@ export default function FishermanDashboard() {
                     <td className="py-3 pr-4 font-mono-data whitespace-nowrap">{c.weightKg} kg</td>
                     <td className="py-3 pr-4 font-mono-data text-seafoam font-semibold whitespace-nowrap">+{c.points}</td>
                     <td className="py-3 pr-4">
-                      <Badge variant={statusVariant[c.status]}>{c.status}</Badge>
+                      <Badge variant={statusVariant[c.status]}>{t(`dashboard.tableStatus.${c.status.toLowerCase()}`)}</Badge>
                     </td>
                   </tr>
                 ))}

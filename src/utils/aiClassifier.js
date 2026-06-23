@@ -33,9 +33,6 @@ export function simulateAIClassification(category, weightKg) {
     basePoints,
     bonus,
     totalPoints,
-    note:
-      category === "Ghost Net"
-        ? "Ghost net recovery bonus applied (+15%) — high environmental impact."
-        : "Standard reward rate applied.",
+    noteKey: category === "Ghost Net" ? "wasteSubmission.ghostNetNote" : "wasteSubmission.standardNote",
   };
 }

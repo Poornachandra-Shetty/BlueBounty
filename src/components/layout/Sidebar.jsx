@@ -1,16 +1,19 @@
 import { NavLink } from "react-router-dom";
 import { Anchor, LayoutDashboard, Upload, BarChart3, Gift, ShieldCheck, Waves, X } from "lucide-react";
-
-const navItems = [
-  { to: "/", label: "Home", icon: Waves, end: true },
-  { to: "/dashboard", label: "Fisherman Dashboard", icon: LayoutDashboard },
-  { to: "/submit", label: "Waste Submission", icon: Upload },
-  { to: "/analytics", label: "Analytics", icon: BarChart3 },
-  { to: "/rewards", label: "Rewards", icon: Gift },
-  { to: "/admin", label: "Admin Dashboard", icon: ShieldCheck },
-];
+import { useTranslation } from "../../contexts/useTranslation.jsx";
 
 export default function Sidebar({ open, onClose }) {
+  const { t } = useTranslation();
+
+  const navItems = [
+    { to: "/", label: t("nav.home"), icon: Waves, end: true },
+    { to: "/dashboard", label: t("nav.dashboard"), icon: LayoutDashboard },
+    { to: "/submit", label: t("nav.submit"), icon: Upload },
+    { to: "/analytics", label: t("nav.analytics"), icon: BarChart3 },
+    { to: "/rewards", label: t("nav.rewards"), icon: Gift },
+    { to: "/admin", label: t("nav.admin"), icon: ShieldCheck },
+  ];
+
   return (
     <>
       {open && (
@@ -56,7 +59,7 @@ export default function Sidebar({ open, onClose }) {
 
         <div className="px-6 py-5 border-t border-white/10">
           <p className="text-xs text-white/40 leading-relaxed">
-            Demo build · Smart India Hackathon<br />Blue Economy Track
+            Demo build · Blue Economy Track
           </p>
         </div>
       </aside>

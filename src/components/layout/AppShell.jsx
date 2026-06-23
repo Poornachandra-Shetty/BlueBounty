@@ -3,20 +3,22 @@ import { Outlet, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
-
-const titles = {
-  "/": "",
-  "/dashboard": "Fisherman Dashboard",
-  "/submit": "Waste Submission",
-  "/analytics": "Pollution Analytics",
-  "/rewards": "Rewards Marketplace",
-  "/admin": "Admin Dashboard",
-};
+import { useTranslation } from "../../contexts/useTranslation.jsx";
 
 export default function AppShell() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { pathname } = useLocation();
+  const { t } = useTranslation();
   const isHome = pathname === "/";
+
+  const titles = {
+    "/": "",
+    "/dashboard": t("pageTitles.dashboard"),
+    "/submit": t("pageTitles.submit"),
+    "/analytics": t("pageTitles.analytics"),
+    "/rewards": t("pageTitles.rewards"),
+    "/admin": t("pageTitles.admin"),
+  };
 
   return (
     <div className="flex min-h-screen bg-mist">

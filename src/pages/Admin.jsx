@@ -6,6 +6,7 @@ import Badge from "../components/ui/Badge";
 import EmptyState from "../components/ui/EmptyState";
 import analytics from "../data/analytics.json";
 import adminData from "../data/admin.json";
+import { useTranslation } from "../contexts/useTranslation.jsx";
 
 const activityIcons = {
   approval: CheckCircle2,
@@ -24,6 +25,7 @@ const activityColor = {
 };
 
 export default function Admin() {
+  const { t } = useTranslation();
   const [queue, setQueue] = useState(adminData.approvalQueue);
 
   const handleDecision = (id) => setQueue((q) => q.filter((item) => item.id !== id));
@@ -31,24 +33,24 @@ export default function Admin() {
   return (
     <div className="px-5 lg:px-8 py-6 max-w-7xl mx-auto space-y-6">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatCard icon={Users} label="Registered Fishermen" value={analytics.platformStats.activeFishermen} accent="#1363DF" />
-        <StatCard icon={Building2} label="Collection Centers" value={analytics.platformStats.collectionCenters} accent="#47B5FF" />
-        <StatCard icon={CalendarCheck} label="Today's Collections" value="312" suffix="kg" accent="#0CCE6B" />
-        <StatCard icon={IndianRupee} label="CSR / Rewards Disbursed" value={`₹${(analytics.platformStats.totalRewardsDistributed / 100000).toFixed(1)}L`} accent="#FF7A5C" />
+        <StatCard icon={Users} label={t("admin.registeredFishermen")} value={analytics.platformStats.activeFishermen} accent="#1363DF" />
+        <StatCard icon={Building2} label={t("admin.collectionCenters")} value={analytics.platformStats.collectionCenters} accent="#47B5FF" />
+        <StatCard icon={CalendarCheck} label={t("admin.todaysCollections")} value="312" suffix="kg" accent="#0CCE6B" />
+        <StatCard icon={IndianRupee} label={t("admin.csrRewards")} value={`₹${(analytics.platformStats.totalRewardsDistributed / 100000).toFixed(1)}L`} accent="#FF7A5C" />
       </div>
 
       <div className="grid lg:grid-cols-2 gap-6">
         {/* Collection centers table */}
         <GlassCard className="p-6">
-          <h3 className="font-display font-semibold text-abyss mb-4">Collection Center Status</h3>
+          <h3 className="font-display font-semibold text-abyss mb-4">{t("admin.centerStatus")}</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="text-left text-abyss/45 text-xs uppercase font-semibold border-b border-abyss/5">
-                  <th className="py-2.5 pr-4">Center</th>
-                  <th className="py-2.5 pr-4">Daily Avg</th>
-                  <th className="py-2.5 pr-4">Sensors</th>
-                  <th className="py-2.5 pr-4">Status</th>
+                  <th className="py-2.5 pr-4">{t("admin.table.center")}</th>
+                  <th className="py-2.5 pr-4">{t("admin.table.dailyAvg")}</th>
+                  <th className="py-2.5 pr-4">{t("admin.table.sensors")}</th>
+                  <th className="py-2.5 pr-4">{t("admin.table.status")}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-abyss/5">
@@ -61,7 +63,7 @@ export default function Admin() {
                     <td className="py-3 pr-4 font-mono-data">{c.dailyAvgKg} kg</td>
                     <td className="py-3 pr-4 font-mono-data">{c.sensorHealth}</td>
                     <td className="py-3 pr-4">
-                      <Badge variant={c.status === "Operational" ? "success" : "pending"}>{c.status}</Badge>
+                      <Badge variant={c.status === "Operational" ? "success" : "pending"}>{t(`admin.status.${c.status.toLowerCase()}`)}</Badge>
                     </td>
                   </tr>
                 ))}
@@ -73,7 +75,7 @@ export default function Admin() {
         {/* Activity feed */}
         <GlassCard className="p-6">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="font-display font-semibold text-abyss">Recent Activity</h3>
+            <h3 className="font-display font-semibold text-abyss">{t("admin.recentActivity")}</h3>
             <Activity className="text-abyss/30" size={18} />
           </div>
           <div className="space-y-4">
@@ -97,12 +99,12 @@ export default function Admin() {
 
       {/* Approval queue */}
       <GlassCard className="p-6">
-        <h3 className="font-display font-semibold text-abyss mb-4">Waste Submission Approval Queue</h3>
+        <h3 className="font-display font-semibold text-abyss mb-4">{t("admin.approvalQueue")}</h3>
         {queue.length === 0 ? (
           <EmptyState
             icon={CheckCircle2}
-            title="Queue cleared"
-            subtitle="Every pending submission has been reviewed. New collections will appear here as they come in from collection centers."
+            title={t("admin.queueCleared")}
+            subtitle={t("admin.queueClearedSubtitle")}
           />
         ) : (
           <div className="space-y-3">
@@ -111,10 +113,10 @@ export default function Admin() {
                 <div className="min-w-0">
                   <p className="font-medium text-abyss">{item.fisherman}</p>
                   <p className="text-xs text-abyss/50">{item.category} · {item.weightKg} kg · {item.center}</p>
-                  <p className="text-xs text-abyss/40 mt-0.5">Submitted {item.submitted}</p>
+                  <p className="text-xs text-abyss/40 mt-0.5">{t("admin.submitted")} {item.submitted}</p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Badge variant="info">AI Confidence {item.aiConfidence}%</Badge>
+                  <Badge variant="info">{t("admin.aiConfidence")} {item.aiConfidence}%</Badge>
                   <button
                     onClick={() => handleDecision(item.id)}
                     className="w-9 h-9 rounded-lg bg-seafoam/10 text-seafoam hover:bg-seafoam hover:text-white transition-colors flex items-center justify-center"
