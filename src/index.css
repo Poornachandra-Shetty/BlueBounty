@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --color-abyss: #06283D;
+  --color-ocean: #1363DF;
+  --color-tide: #47B5FF;
+  --color-seafoam: #0CCE6B;
+  --color-mist: #EAF6FF;
+  --color-ink: #0A1A2A;
+  --color-coral: #FF7A5C;
+
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-mist);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-data {
+  font-family: var(--font-mono);
+}
+
+/* Net-mesh signature texture: nods to ghost-net recovery theme */
+.net-mesh {
+  background-image:
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 26px),
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 26px);
+}
+
+.net-mesh-dark {
+  background-image:
+    repeating-linear-gradient(45deg, rgba(6,40,61,0.05) 0px, rgba(6,40,61,0.05) 1px, transparent 1px, transparent 22px),
+    repeating-linear-gradient(-45deg, rgba(6,40,61,0.05) 0px, rgba(6,40,61,0.05) 1px, transparent 1px, transparent 22px);
+}
+
+/* Glassmorphism card */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-dark {
+  background: rgba(10, 26, 42, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Sonar ping animation — signature hero element */
+@keyframes sonar-ping {
+  0% { transform: scale(0.6); opacity: 0.7; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+.sonar-ring {
+  animation: sonar-ping 2.8s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.drift {
+  animation: drift 6s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-mist); }
+::-webkit-scrollbar-thumb { background: var(--color-tide); border-radius: 8px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sonar-ring, .drift, .fade-up { animation: none !important; }
+}
+
+.leaflet-container {
+  border-radius: 1rem;
+  font-family: var(--font-body);
+}

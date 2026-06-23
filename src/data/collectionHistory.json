@@ -1,0 +1,8 @@
+[
+  { "id": "CL-9081", "date": "2026-06-20", "category": "Ghost Net", "weightKg": 18.4, "center": "Versova Smart Collection Hub", "points": 368, "status": "Approved" },
+  { "id": "CL-9070", "date": "2026-06-17", "category": "PET Bottles", "weightKg": 9.2, "center": "Versova Smart Collection Hub", "points": 138, "status": "Approved" },
+  { "id": "CL-9054", "date": "2026-06-12", "category": "Plastic Sheeting", "weightKg": 14.6, "center": "Versova Smart Collection Hub", "points": 219, "status": "Approved" },
+  { "id": "CL-9039", "date": "2026-06-08", "category": "Mixed Plastic", "weightKg": 11.0, "center": "Versova Smart Collection Hub", "points": 165, "status": "Approved" },
+  { "id": "CL-9021", "date": "2026-06-03", "category": "Ghost Net", "weightKg": 22.1, "center": "Versova Smart Collection Hub", "points": 442, "status": "Approved" },
+  { "id": "CL-9005", "date": "2026-05-29", "category": "Fishing Line", "weightKg": 4.3, "center": "Versova Smart Collection Hub", "points": 65, "status": "Pending" }
+]

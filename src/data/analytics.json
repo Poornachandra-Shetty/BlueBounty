@@ -1,0 +1,25 @@
+{
+  "categoryDistribution": [
+    { "name": "Ghost Nets", "value": 2870, "color": "#1363DF" },
+    { "name": "PET Bottles", "value": 2140, "color": "#47B5FF" },
+    { "name": "Plastic Sheeting", "value": 1680, "color": "#0CCE6B" },
+    { "name": "Fishing Line", "value": 940, "color": "#FF7A5C" },
+    { "name": "Mixed Plastic", "value": 1520, "color": "#06283D" }
+  ],
+  "platformStats": {
+    "totalWasteKg": 9150,
+    "activeFishermen": 312,
+    "ghostNetsKg": 2870,
+    "plasticKg": 6280,
+    "collectionCenters": 14,
+    "totalRewardsDistributed": 1828000,
+    "co2OffsetTonnes": 41.6
+  },
+  "collectionCenters": [
+    { "id": "CC-01", "name": "Versova Smart Collection Hub", "location": "Mumbai", "dailyAvgKg": 312, "status": "Operational", "sensorHealth": "98%" },
+    { "id": "CC-02", "name": "Malvan Coastal Station", "location": "Sindhudurg", "dailyAvgKg": 284, "status": "Operational", "sensorHealth": "95%" },
+    { "id": "CC-03", "name": "Ratnagiri Bay Center", "location": "Ratnagiri", "dailyAvgKg": 198, "status": "Operational", "sensorHealth": "91%" },
+    { "id": "CC-04", "name": "Karwar Port Facility", "location": "Karwar", "dailyAvgKg": 176, "status": "Maintenance", "sensorHealth": "62%" },
+    { "id": "CC-05", "name": "Mangalore Dock Hub", "location": "Mangalore", "dailyAvgKg": 241, "status": "Operational", "sensorHealth": "97%" }
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  { "id": "RW-01", "title": "Fuel Voucher — 500 INR", "category": "Fuel", "points": 1000, "stock": 42, "icon": "Fuel", "description": "Redeemable at any IOCL/HPCL coastal fuel station." },
+  { "id": "RW-02", "title": "Ice Box Subsidy — 30% Off", "category": "Equipment", "points": 1800, "stock": 18, "icon": "Snowflake", "description": "Subsidy voucher on insulated ice boxes from partner vendors." },
+  { "id": "RW-03", "title": "Fishing Net Discount — 25% Off", "category": "Equipment", "points": 2200, "stock": 25, "icon": "Anchor", "description": "Discount on durable nylon nets at partner tackle shops." },
+  { "id": "RW-04", "title": "Marine Safety Kit", "category": "Safety", "points": 3000, "stock": 12, "icon": "ShieldCheck", "description": "Life jacket, first-aid kit, and emergency whistle set." },
+  { "id": "RW-05", "title": "Fuel Voucher — 1000 INR", "category": "Fuel", "points": 1900, "stock": 30, "icon": "Fuel", "description": "Redeemable at any IOCL/HPCL coastal fuel station." },
+  { "id": "RW-06", "title": "GPS Fish Finder Discount — 15% Off", "category": "Equipment", "points": 4200, "stock": 8, "icon": "Radar", "description": "Discount on entry-level GPS and fish-finder devices." },
+  { "id": "RW-07", "title": "Boat Engine Servicing Voucher", "category": "Maintenance", "points": 3600, "stock": 10, "icon": "Wrench", "description": "Free annual servicing at partner boat-engine workshops." },
+  { "id": "RW-08", "title": "Solar Lantern Pack", "category": "Safety", "points": 1500, "stock": 35, "icon": "Lightbulb", "description": "Set of 2 waterproof solar lanterns for night fishing." }
+]

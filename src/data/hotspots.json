@@ -1,0 +1,10 @@
+[
+  { "id": 1, "name": "Versova Coast", "lat": 19.1310, "lng": 72.8130, "severity": "High", "wasteKg": 4820, "dominant": "Plastic & Ghost Nets" },
+  { "id": 2, "name": "Malvan Bay", "lat": 16.0667, "lng": 73.4667, "severity": "High", "wasteKg": 5210, "dominant": "Ghost Nets" },
+  { "id": 3, "name": "Ratnagiri Shoreline", "lat": 16.9902, "lng": 73.3120, "severity": "Medium", "wasteKg": 3140, "dominant": "PET Bottles" },
+  { "id": 4, "name": "Karwar Estuary", "lat": 14.8137, "lng": 74.1290, "severity": "Medium", "wasteKg": 2890, "dominant": "Mixed Plastic" },
+  { "id": 5, "name": "Mangalore Port Belt", "lat": 12.9141, "lng": 74.8560, "severity": "High", "wasteKg": 4470, "dominant": "Plastic Sheeting" },
+  { "id": 6, "name": "Alibaug Cove", "lat": 18.6414, "lng": 72.8722, "severity": "Low", "wasteKg": 1620, "dominant": "Fishing Line" },
+  { "id": 7, "name": "Sindhudurg Reef", "lat": 16.0167, "lng": 73.5667, "severity": "Medium", "wasteKg": 2510, "dominant": "Ghost Nets" },
+  { "id": 8, "name": "Dapoli Shore", "lat": 17.7585, "lng": 73.1840, "severity": "Low", "wasteKg": 1340, "dominant": "Mixed Plastic" }
+]

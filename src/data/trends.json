@@ -1,0 +1,18 @@
+{
+  "personal": [
+    { "month": "Jan", "kg": 38 },
+    { "month": "Feb", "kg": 51 },
+    { "month": "Mar", "kg": 64 },
+    { "month": "Apr", "kg": 72 },
+    { "month": "May", "kg": 88 },
+    { "month": "Jun", "kg": 96 }
+  ],
+  "platform": [
+    { "month": "Jan", "plastic": 1240, "ghostNets": 320, "other": 410 },
+    { "month": "Feb", "plastic": 1480, "ghostNets": 390, "other": 460 },
+    { "month": "Mar", "plastic": 1810, "ghostNets": 455, "other": 520 },
+    { "month": "Apr", "plastic": 2120, "ghostNets": 510, "other": 590 },
+    { "month": "May", "plastic": 2460, "ghostNets": 605, "other": 640 },
+    { "month": "Jun", "plastic": 2780, "ghostNets": 690, "other": 705 }
+  ]
+}

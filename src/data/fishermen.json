@@ -1,0 +1,10 @@
+[
+  { "id": "FM-1042", "name": "Raghu Naik", "village": "Malvan, Maharashtra", "boat": "Sagarika III", "totalKg": 842, "points": 16840, "trips": 64, "rank": 1, "joined": "2024-11-02", "avatarColor": "#1363DF" },
+  { "id": "FM-1108", "name": "Devanand Tandel", "village": "Ratnagiri, Maharashtra", "boat": "Matsya Rani", "totalKg": 761, "points": 15220, "trips": 58, "rank": 2, "joined": "2024-12-10", "avatarColor": "#0CCE6B" },
+  { "id": "FM-1077", "name": "Suresh Koli", "village": "Versova, Mumbai", "boat": "Lakshmi Devi", "totalKg": 705, "points": 14100, "trips": 51, "rank": 3, "joined": "2025-01-05", "avatarColor": "#FF7A5C" },
+  { "id": "FM-1203", "name": "Anand Bhandari", "village": "Karwar, Karnataka", "boat": "Neel Kiran", "totalKg": 668, "points": 13360, "trips": 49, "rank": 4, "joined": "2025-01-22", "avatarColor": "#47B5FF" },
+  { "id": "FM-1156", "name": "Manoj Patil", "village": "Sindhudurg, Maharashtra", "boat": "Varuna's Blessing", "totalKg": 612, "points": 12240, "trips": 45, "rank": 5, "joined": "2025-02-14", "avatarColor": "#1363DF" },
+  { "id": "FM-1301", "name": "Vinod Tare", "village": "Alibaug, Maharashtra", "boat": "Samudra Putra", "totalKg": 588, "points": 11760, "trips": 43, "rank": 6, "joined": "2025-02-28", "avatarColor": "#0CCE6B" },
+  { "id": "FM-1255", "name": "Ramesh Gawde", "village": "Dapoli, Maharashtra", "boat": "Jay Bholenath", "totalKg": 534, "points": 10680, "trips": 39, "rank": 7, "joined": "2025-03-09", "avatarColor": "#FF7A5C" },
+  { "id": "FM-1389", "name": "Sandeep Bangera", "village": "Mangalore, Karnataka", "boat": "Sea Eagle", "totalKg": 497, "points": 9940, "trips": 36, "rank": 8, "joined": "2025-03-30", "avatarColor": "#47B5FF" }
+]

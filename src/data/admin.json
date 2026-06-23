@@ -1,0 +1,17 @@
+{
+  "approvalQueue": [
+    { "id": "CL-9112", "fisherman": "Vinod Tare", "category": "Ghost Net", "weightKg": 16.8, "center": "Versova Smart Collection Hub", "submitted": "2026-06-22 14:10", "aiConfidence": 96 },
+    { "id": "CL-9111", "fisherman": "Anand Bhandari", "category": "Mixed Plastic", "weightKg": 8.4, "center": "Karwar Port Facility", "submitted": "2026-06-22 11:42", "aiConfidence": 88 },
+    { "id": "CL-9110", "fisherman": "Sandeep Bangera", "category": "PET Bottles", "weightKg": 12.1, "center": "Mangalore Dock Hub", "submitted": "2026-06-22 09:15", "aiConfidence": 99 },
+    { "id": "CL-9109", "fisherman": "Ramesh Gawde", "category": "Plastic Sheeting", "weightKg": 6.7, "center": "Malvan Coastal Station", "submitted": "2026-06-21 18:50", "aiConfidence": 91 },
+    { "id": "CL-9108", "fisherman": "Manoj Patil", "category": "Fishing Line", "weightKg": 3.2, "center": "Malvan Coastal Station", "submitted": "2026-06-21 16:08", "aiConfidence": 84 }
+  ],
+  "activityFeed": [
+    { "id": 1, "type": "approval", "text": "Approved 18.4kg Ghost Net submission from Suresh Koli", "time": "2 min ago" },
+    { "id": 2, "type": "new_fisherman", "text": "New fisherman registered: Pratap Salvi (Vengurla)", "time": "26 min ago" },
+    { "id": 3, "type": "redemption", "text": "Devanand Tandel redeemed Fuel Voucher — 1000 INR", "time": "1 hr ago" },
+    { "id": 4, "type": "alert", "text": "Sensor health dropped to 62% at Karwar Port Facility", "time": "3 hrs ago" },
+    { "id": 5, "type": "approval", "text": "Approved 9.2kg PET Bottles submission from Suresh Koli", "time": "5 hrs ago" },
+    { "id": 6, "type": "milestone", "text": "Platform crossed 9,000kg total marine waste collected", "time": "1 day ago" }
+  ]
+}
